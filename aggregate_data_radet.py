@@ -477,7 +477,7 @@ tx_new_BF = combined_data[common_condition_tx_new & ((first_condition | second_c
 tx_new_Pregnant = combined_data[common_condition_tx_new & ((first_condition | second_condition) & Pregnant)]
 tx_new_Pregnant_and_BF = combined_data[common_condition_tx_new & ((first_condition | second_condition) & Pregnant_and_BF)]
 
-temp_tx_rtt = combined_data[(
+tx_rtt = combined_data[(
     (combined_data['Current ART Status'].isin(['Active Restart'])) &
     ((combined_data['Date of Current ART Status'] >= Start_of_quarter) & (combined_data['Date of Current ART Status'] <= End_of_quarter)) &
     ((combined_data['Client Verification Outcome'].isin(['valid', 'valid ', ' valid', 'Valid'])) |
@@ -1247,7 +1247,7 @@ tx_pvls_n_pregnant_pivot = pivot_data(tx_pvls_n_pregnant, 'TX_PVLS_N_Pregnant')
 tx_pvls_n_breastfeeding_pivot = pivot_data(tx_pvls_n_breastfeeding, 'TX_PVLS_N_Breastfeeding')
 tx_new_pivot = pivot_data(tx_new, 'TX_NEW')
 tx_new_BF_pivot = pivot_data(tx_new_BF, 'TX_NEW_BF')
-temp_tx_rtt_pivot = pivot_data(temp_tx_rtt, 'TEMP_TX_RTT')
+tx_rtt_pivot = pivot_data(tx_rtt, 'TX_RTT')
 tx_ml_Stopped_pivot = pivot_data(tx_ml_Stopped_TX, 'TX_ML_Stopped_TX')
 tx_ml_Died_pivot = pivot_data(tx_ml_Died, 'TX_ML_Died')
 tx_ml_Transfer_out_pivot = pivot_data(tx_ml_Transfer_out, 'TX_ML_Transfer_out')
@@ -1303,7 +1303,7 @@ all_pivots_for_summary = [
     tx_pvls_n_pregnant_pivot,
     tx_pvls_n_breastfeeding_pivot,
     tx_new_BF_pivot,
-    temp_tx_rtt_pivot,
+    tx_rtt_pivot,
     tx_ml_Stopped_pivot,
     tx_ml_Died_pivot,
     tx_ml_Transfer_out_pivot,
@@ -1417,3 +1417,4 @@ if all(col in combined_data.columns for col in viral_load_columns):
         print(f"\nError saving viral load data: {e}")
 else:
     print("\nWarning: 'Current Viral Load (c/ml)' or 'Cleaned Current Viral Load (c/ml)' column not found. Skipping viral load data export.")
+
