@@ -8,8 +8,7 @@ This repository contains automated scripts designed to aggregate indicators acro
 
 ### 1\. Prerequisites
 
-* **Python 3**
-* **Google Colab**
+* **Python 3** or **Google Colab**
 
 ### 2\. How to Run the Script
 
