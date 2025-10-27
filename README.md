@@ -58,7 +58,7 @@ This repository contains the following aggregating indicator scripts:
 
 ## ❓ Troubleshooting & Support
 
-  * **Error running the script?** Double-check that your `FOLDER_PATH`, `OUTPUT_BASE_DIR` and other `output_paths' are correctly formatted and enclosed in quotes.
+  * **Error running the script?** Double-check that your `FOLDER_PATH`, `OUTPUT_BASE_DIR` and other `output_paths` are correctly formatted and enclosed in quotes.
 
 ## Authors & Acknowledgement
 -----
