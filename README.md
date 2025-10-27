@@ -30,7 +30,7 @@ Each script is pre-configured with placeholder variables. You **MUST** update th
 | Variable Name | Purpose | Example Value to Change |
 | :--- | :--- | :--- |
 | **`FOLDER_PATH`** | The **input directory** containing the raw data files that the script needs to check. | `"C:/Users/oluwabukola.arowolo/OneDrive - Palladium International, LLC/Documents/DataFi/FY26Q1_RADET"` |
-| **`OUTPUT_BASE_DIR`** | The **output directory** where the final aggregate data will be saved. | `"C:/Users/oluwabukola.arowolo/OneDrive - Palladium International, LLC/Documents/DataFi/Project_Export_Quality_Check"` |
+| **`OUTPUT_BASE_DIR`** or **`output_file_path`** | The **output directory** where the final aggregate data will be saved. | `"C:/Users/oluwabukola.arowolo/OneDrive - Palladium International, LLC/Documents/DataFi/Project_Export_Quality_Check"` |
 | **`Periods`** | The **Defining Period Section** where you will specify the period of analysis required. | `Start_of_quarter`, `End_of_quarter`, `six_months_ago` |
 | **`viral_load_output_path`** | The **output directory** where viral load column and cleaned viral load column is extracted to for troubleshooting. | `"C:/Users/oluwabukola.arowolo/OneDrive - Palladium International, LLC/Documents/DataFi/Cleaned_Viral_Load_Values.xlsx"` |
 | **`unique_cd4_output_path`** | The **output directory** where unique values in the Last CD4 column and cleaned Last CD4 column is extracted to for troubleshooting. | `"C:/Users/oluwabukola.arowolo/OneDrive - Palladium International, LLC/Documents/DataFi/Cleaned_CD4_Values.xlsx"` |
@@ -52,6 +52,7 @@ This repository contains the following aggregating indicator scripts:
 | **`aggregate_data_hts.py`** | HTS | aggregates indicators specific to HIV Testing Services (HTS) report. |
 | **`aggregate_data_pmtct_hts.py`** | PMTCT_HTS | aggregates indicators specific to Prevention of Mother-to-Child Transmission (PMTCT) report. |
 | **`aggregate_data_hts_index.py`** | HTS_INDEX | aggregates indicators specific to HTS_INDEX report. |
+| **`aggregate_data_prep.py`** | PrEP | aggregates indicators specific to PrEP report. |
 
 -----
 
