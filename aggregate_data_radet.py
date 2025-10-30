@@ -1302,6 +1302,7 @@ all_pivots_for_summary = [
     tx_pvls_n_pbf_pivot,
     tx_pvls_n_pregnant_pivot,
     tx_pvls_n_breastfeeding_pivot,
+    tx_new_pivot,
     tx_new_BF_pivot,
     tx_rtt_pivot,
     tx_ml_Stopped_pivot,
@@ -1417,4 +1418,5 @@ if all(col in combined_data.columns for col in viral_load_columns):
         print(f"\nError saving viral load data: {e}")
 else:
     print("\nWarning: 'Current Viral Load (c/ml)' or 'Cleaned Current Viral Load (c/ml)' column not found. Skipping viral load data export.")
+
 
